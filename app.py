@@ -38,11 +38,9 @@ def following_people("/followers/"):
     data_followers = response.json()
 
     info_followers{
-        followers : data_followers
+        followers : data_followers}
 
-    }
-
-    return render_template('followers.html.html', **info_followers)
+    return render_template('followers.html', **info_followers)
 
 
 
