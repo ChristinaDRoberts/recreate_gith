@@ -13,8 +13,8 @@ import requests
 app = Flask(__name__)   #load all the packages
 
 
-@app.route("/repos/")  #this says if the search bar shows /with nothing following insert the info form api
-def index():      #defining function that will get my info for profile page from github
+@app.route("/")  #this says if the search bar shows / insert the info from this function
+def index():      #defining function that will get my info for page from github
     response = requests.get("https://api.github.com/users/ChristinaDRoberts")
     response2 = requests.get("https://api.github.com/users/ChristinaDRoberts/repos")
     data = response.json()
@@ -24,11 +24,15 @@ def index():      #defining function that will get my info for profile page from
     # print(data[1])
 
     info_repo = {
-        repos : data2 , general : data
+        'repos': data2, 'general': data
     }
 
     return render_template('index.html', **info_repo)
 
+
+######## how to make tab sent tp followers  ############
+
+#############################################################################
 
 @app.route('/followers/', methods=["GET", "POST"]) #if query string has repos included it will GET (using get mehtod)info
                                                 # from api and will use the method POST to pass in info that user types
@@ -38,7 +42,7 @@ def following_people():
     data_followers = response.json()
 
     info_followers = {
-        followers : data_followers}
+        "followers" : data_followers}
 
     return render_template('followers.html', **info_followers)
 
