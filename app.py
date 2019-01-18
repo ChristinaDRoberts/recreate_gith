@@ -33,11 +33,11 @@ def index():      #defining function that will get my info for profile page from
 @app.route('/followers/', methods=["GET", "POST"]) #if query string has repos included it will GET (using get mehtod)info
                                                 # from api and will use the method POST to pass in info that user types
                                                 # in search bar
-def following_people("/followers/"):
+def following_people():
     response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
     data_followers = response.json()
 
-    info_followers{
+    info_followers = {
         followers : data_followers}
 
     return render_template('followers.html', **info_followers)

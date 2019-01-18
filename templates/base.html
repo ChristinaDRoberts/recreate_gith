@@ -3,15 +3,15 @@
 
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--<meta charset="UTF-8">-->
+        <!--<meta name="viewport"-->
+              <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+        <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
               integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
               crossorigin="anonymous">
 
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="static/styles.css" type="text/css">
 
         <title>Git Hub Recreation</title>
     </head>
@@ -22,11 +22,11 @@
             <div class="left_nav">  <!--#div for what we will float left-->
                 <ul>
                     <li><<img src="#" alt="git hub logo"></li>
-                    <li><sumbit></sumbit></li>
-                    <button type="button" class="btn btn-dark">Pull Requests</button>
-                    <button type="button" class="btn btn-dark">Issues</button>
-                    <button type="button" class="btn btn-dark">Marketplace</button>
-                    <button type="button" class="btn btn-dark">Explore</button>
+                    <li><sumbit>Search</sumbit></li>
+                    <li><<button type="button" class="btn btn-dark">Pull Requests</button></li>
+                    <li><button type="button" class="btn btn-dark">Issues</button></li>
+                    <li><button type="button" class="btn btn-dark">Marketplace</button></li>
+                    <li><button type="button" class="btn btn-dark">Explore</button></li>
                 </ul>
             </div>
 
@@ -34,33 +34,36 @@
             <div class="right_nav">  <!-- div for what we will float right-->
                 <img src="#" alt="bell">
                 <div class="dropdown1">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" <!--button with drop menu-->
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt="plus">
                     </button>
-                        <div class="dropdown-menu-plus" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">New Repository</a>
-                            <a class="dropdown-item" href="#">Import Repository</a>
-                            <a class="dropdown-item" href="#">New Gist</a>
-                            <a class="dropdown-item" href="#">New Organization</a>
-                        </div>
+                    <div class="dropdown-menu-plus" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">New Repository</a>
+                        <a class="dropdown-item" href="#">Import Repository</a>
+                        <a class="dropdown-item" href="#">New Gist</a>
+                        <a class="dropdown-item" href="#">New Organization</a>
+                    </div>
                 </div>
 
 
                 <div class="dropdown2">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt="avatar">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt="avatar"
                     </button>
-                        <div class="dropdown-menu-plus" aria-labelledby="dropdownMenuButton"> <!--button with dropdown menu-->
-                            <a class="dropdown-item" href="#">Signed in as </a>
-                            <a class="dropdown-item" href="#">Focusing</a>
-                            <a class="dropdown-item" href="#">Your Profile</a>
-                            <a class="dropdown-item" href="#">Your Repositories</a>
-                            <a class="dropdown-item" href="#">Your Stars</a>
-                            <a class="dropdown-item" href="#">Your Gists</a>
-                            <a class="dropdown-item" href="#">Help</a>
-                            <a class="dropdown-item" href="#">Settings</a>
-                            <a class="dropdown-item" href="#">Sign Out</a>
-                        </div>
+                    <div class="dropdown-menu-plus" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Signed in as </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Set Your Status</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Your Profile</a>
+                        <a class="dropdown-item" href="#">Your Repositories</a>
+                        <a class="dropdown-item" href="#">Your Stars</a>
+                        <a class="dropdown-item" href="#">Your Gists</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -75,49 +78,51 @@
                                 <"img src="#" alt="avatar_url picture">
                                 <a href="#"><h4>Set your Status</h4></a>
                                 <a href="#"><h4>Give us Feedback</h4></a>
-                            </div>    #ends picture row
+                            </div>
                        </div>
 
                         <div class="row">
                             <h1>name</h1>
                             <h2>user name</h2>
                             <button type="button" class="btn btn-secondary">Edit</button>
-                        </div> #ends name and edit row
+                        </div>
 
 
                        <div class="row">
                            <h3>Organization</h3>
                            <a href="#"><img class= "python_logo" src="`#" alt="python logo"></a>
-                       </div> #ends row of organization tags
-                   </div> #ends smaller right column
-               </div> #ends row div
+                       </div>
+                   </div>
+               </div>
 
-            </div> #closes out the 4 column that will stay on left of every page
+            </div>
 
         <hr/>
         list of repositories here
+           <a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-star"></span> Star</a>
+           <!--link for button with star for repos-->
         <hr/>
 
         <footer>
 
                <h5>@2019 Git Hub Inc</h5>
                <ul>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
+                   <li><a href="#">Terms</a></li>
+                   <li><a href="#">Privacy</a></li>
+                   <li><a href="#"></a>Security</li>
+                   <li><a href="#"></a>Status</li>
+                   <li><a href="#"></a>Help</li>
                </ul>
 
                <img src="#" alt="bottom_cat_lol">
 
                <ul>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
+                   <li><a href="#">Contact GitHu</a></li>
+                   <li><a href="#">Pricing</a></li>
+                   <li><a href="#">API</a></li>
+                   <li><a href="#">Training</a></li>
+                   <li><a href="#">Blog</a></li>
+                   <li><a href="#">About</a></li>
                </ul>
         </footer>
     </body>
