@@ -1,7 +1,9 @@
 
-.container{
+.container-fluid{
     margin:0;
+    background-color: black;
 }
+
 ul{
     list-style: none;
     display: inline-block;
@@ -10,6 +12,11 @@ ul{
 li{
     display: inline-block;
 
+.left-ul{
+    width:70%;
+    padding-left:0;
+    margin-bottom: 0;
+}
 
 }
 div{
@@ -25,7 +32,7 @@ body{
 }
 .left-nav{
     display: inline-block;
-    /*width: 30%;*/
+    width: 70%;
 }
 
 .right-nav{
@@ -48,5 +55,12 @@ body{
 }
 
 .col-md-6{
-    float: right;
+    margin: auto;
+    margin-right:0;
+}
+
+.header-search-input{
+    width:50%;
+    margin-right: 0;
+    padding-left:0;
 }

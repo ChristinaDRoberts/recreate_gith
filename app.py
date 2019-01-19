@@ -13,8 +13,8 @@ import requests
 #load all the packages
 app = Flask(__name__)   #load all the packages ??? where does it look for packages
 
-#this says if the search bar shows / , not clicking on tab, insert the info from this function
-@app.route("/", methods=["GET", "POST"])
+#this says if the search bar shows /(just base url) insert the info from this function
+@app.route("/", methods=["GET"])
 # defining function that will get my info for page from github
 def index():
     # gets info from api and stores it in variable response
@@ -46,8 +46,9 @@ def index():
 #############################################################################
 
 
-#if query string has followers included bc the tab was clicked it will GET (using get mehtod)info from api
-# an api is literally a collection of data and these apis are listsof dictionaries
+#if query string has followers included bc the tab was clicked ( /followers endpoint after base url
+# it will GET (using get method)info from api
+# an api is literally a collection of data and these particular  apis are lists of dictionaries
 
 @app.route('/followers/', methods=["GET"])
 
@@ -60,7 +61,13 @@ def following_people():
 
     print(data_followers)
 
+
+    #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
+    #template file. render_template is a jinja2 method
     return render_template('followers.html', **info_followers)
 
-
-
+#
+# use this is pipenv shell and no restarting of server required
+# export FLASK_APP=my_application
+# $ export FLASK_ENV=development
+# $
