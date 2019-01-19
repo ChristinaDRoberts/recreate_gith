@@ -78,3 +78,7 @@ body{
     margin-left:0;
     float:right;
 }
+
+.btn-lg{
+    float: right;
+}
