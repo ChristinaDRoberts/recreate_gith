@@ -29,15 +29,15 @@ def index():
     # print(data[1])
 
     # create a dictionary and assign it a key of repos and a value of the info from second api
-    info_repo = {
+    context = {
         'repos': data2, 'general': data #also assign it another key of general and value of repos info
     }
 
-    print(type(repos))
+    print(type(context["repos"]))
     # sends the info back to program using render template function
     # in index file which we will be using for repos page, and replace the {% %} values with
     # key : value data that we call out of the api data se
-    return render_template('index.html', **info_repo)
+    return render_template('index.html', **context)
 
 
 
