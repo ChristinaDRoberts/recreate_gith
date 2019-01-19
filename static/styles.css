@@ -22,11 +22,11 @@ li{
 div{
     display: inline-block;
     /*width:20%;*/
-    border: 2px dotted black;
+    /*border: 2px dotted black;*/
 }
 
 body{
-    background-color: pink;
+    background-color: fff;
     width: 95%;
     margin: 0 auto;
 }
@@ -63,4 +63,18 @@ body{
     width:50%;
     margin-right: 0;
     padding-left:0;
+}
+
+#your-repos-filter{
+    width: 40%;
+    display: inline-block;
+}
+
+.repos-link{
+
+}
+
+.col-md-8{
+    margin-left:0;
+    float:right;
 }

@@ -84,15 +84,15 @@
 
          </header>
 
-    <section class="whole-12-col"
-       <div class="row">
+
+       <div class="container-lg clearfix px-3 mt-4">
             <div class="col-md-4 far-left-column">
                 <div class="row">
                    <div class="col-md-6">
                        <div class="row">
                             <div class="picture-block">
                                 <img src="https://avatars3.githubusercontent.com/u/45241134?s=40&amp;v=4"
-                                     alt="avatar_url picture" heght="95px" width="75px">
+                                     alt="avatar_url picture" height="95px" width="75px">
                                 <a href="#"><h4>Set your Status</h4></a>
                                 <a href="#"><h4>Give us Feedback</h4></a>
                             </div>
@@ -115,7 +115,9 @@
             </div>
        </div>
 
-        <div class="col-md-8"
+
+
+        <div class="col-md-8 d-inlineblock">
              <div class="topnav">
                <a href="#" class="active">Overview</a>
                <a href="#">Repositories</a>
@@ -126,29 +128,27 @@
 
              <nav class="middle-nav">
                <input type="search" id="your-repos-filter" name="q" class="form-control width-full js-autosearch-field" placeholder="Find a repository…" autocomplete="off" aria-label="Find a repository…" value="">
-               <div class="btn-group">
-               <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Type: All
-               </button>
-               <div class="dropdown-menu dropdown-menu-right">
-                 <button class="dropdown-item" type="button">All</button>
-                 <button class="dropdown-item" type="button">Public</button>
-                 <button class="dropdown-item" type="button">Private</button>
-                 <button class="dropdown-item" type="button">Sources</button>
-                 <button class="dropdown-item" type="button">Forks</button>
-                 <button class="dropdown-item" type="button">Archived</button>
-                 <button class="dropdown-item" type="button">Mirrors</button>
+                   <div class="btn-group">
+                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Type: All
+                       </button>
+                           <div class="dropdown-menu dropdown-menu-right">
+                             <button class="dropdown-item" type="button">All</button>
+                             <button class="dropdown-item" type="button">Public</button>
+                             <button class="dropdown-item" type="button">Private</button>
+                             <button class="dropdown-item" type="button">Sources</button>
+                             <button class="dropdown-item" type="button">Forks</button>
+                             <button class="dropdown-item" type="button">Archived</button>
+                             <button class="dropdown-item" type="button">Mirrors</button>
 
-                 </div>
-             </div>
-            </nav>
+                             </div>
+                    </div>
+                </nav>
 
-
-        <!--<hr/>-->
-        <!--list of repositories here-->
-           <!--&lt;!&ndash;<a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-star"></span> Star</a>&ndash;&gt;-->
-           <!--&lt;!&ndash;link for button with star for repos&ndash;&gt;-->
-        <!--<hr/>-->
+            <hr/>
+            {% block content %} {% endblock %}
+            <hr/>
+        </div>
 
 
         <section class="container">
@@ -188,4 +188,3 @@
 
 </html>
 
-{#xmlns="http://www.w3.org/1999/html"#}

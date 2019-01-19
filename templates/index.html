@@ -8,19 +8,17 @@
 {#TEMPLATE TAG TO BUILD HTML#}
 {% block content %}
 {#    MAKE A UL TO HOLD THE LIST OF REPOS -  THIS WILL GO IN COL-MD-8#}
-    <ul class="list-group">
+    <ul class="list-group repo-table">
 {#    FOR LOOOP TO GO THROUGH EACH REPOSITORY ITEM AND MAKE A LINK OUT OF THE NAME#}
         {% for repo in repos %}
-{#            CREATES A LIST OF THE REPOSITORY TITLES WITH A LINKS TO THE REPOS#}
-            <li class="list-group-item">
+{#            CREATES A LIST OF THE REPOSITORY TITLES WITH LINKS TO THE REPOS#}
+            <li class="list-group-item repo-table-item">
 
 {#               IN THE CURLY BRACES IN THIS, IT WILL INSERT THE TITLE OF THE REPO FOR THAT LINK#}
-                <a class="btn btn-primary" href=/{{ loop.index }}/">{{ repo.title }}</a>
+                <a class="btn btn-primary repos-link" href="/"{{ loop.index }}/">{{ repo.title }}</a>
 {#                 MAKES A BUTTON WITH A STAR ON IT TO STAR THE REPOSITORY#}
                 <a href="#" class="btn btn-info btn-lg">
-
-                <span class="glyphicon glyphicon-star"></span> Star
-                </a>
+                    <span class="glyphicon glyphicon-star"></span> Star</a>
             </li>
 {#            ENDS THIS TEMPLATE TAG FOR LOOP#}
         {% endfor %}
@@ -30,4 +28,4 @@
 
 
 
-{% block  %} {{ }} {% endblock %}
+{#{% block  %} {{ }} {% endblock %}#}
