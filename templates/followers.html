@@ -30,24 +30,25 @@
                              <a class="d-inline-block no-underline " href="{{follower.name}}">"{{ follower.name }}" </a>
 {#                                INSERT FOLLOWERS USERNAME#}
 {#                             <span class="f4 link-gray-dark"</span>#}
-                             <a>href="{{follower.url }}"> {{ follower.login }}</a>
-                            <span class="link-gray "></span></a>
 
-                             <div class="text-gray text-small ">
-{#                                 INSERT BIO HERE#}
+                            <p href="{{follower.login}}">{{ follower.login }}</p>
+                            <a href="{{follower.email}}">{{ follower.email }}</a> 
+                             <span class="link-gray "><a href="{{follower.location}}">{{ follower.location }}</a> </span>
+                             <div class="text-gray text-small bio " ><p href="{{ follower.bio }}"> {{ follower.bio }}</p>
+{#
 
-                            <div> ^^^^^</div>
-                             </div>
-                             <p class="text-gray text-small mb-0">
+{#                            <div> ^^^^^</div>#}
+{#                             </div>#}
+{#                             <p class="text-gray text-small mb-0">#}
 {#                             MAKE OCTICON WITH ORganization#}
-                                 <svg></svg>
+{#                                 <svg></svg>#}
 {#                             MAKE OCTICON WITH LOCATION#}
-                                <svg></svg>
-                             </p>
+{#                                <svg></svg>#}
+{#                             </p>#}
 
 {#                          UNFOLLOW BUTTON#}
-                          <div class=" d-table-cell col 2 v-align-top text right">
-                              <button class="btn-bt-sm js-toggler-target">UNFOLLOW</button>
+                          <div class=" d-table-cell col 2 v-align-top text right ">
+                              <button class="btn-bt-sm js-toggler-target ">UNFOLLOW</button>
                           </div>
                     </tr>
 
