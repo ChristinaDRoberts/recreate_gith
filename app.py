@@ -60,7 +60,7 @@ def following_people():
     info_followers = {
         "followers" : data_followers}
 
-    print(data_followers)
+
 
 
     #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
