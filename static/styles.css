@@ -133,3 +133,9 @@ body{
   /*text-align: center;*/
 /*}*/
 
+
+
+.header-search-input{
+   width:35%;
+   display: inline-block;
+}

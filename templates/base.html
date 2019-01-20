@@ -116,12 +116,19 @@
 
 
 
+
+
         <div class="col-md-8 d-inlineblock">
              <div class="UnderLineNav">
                <a href="#">Overview</a>
                <a href="#" class="active">Repositories</a>
                <a href="#">Stars</a>
-               <a href="#">Followers</a>
+               <a href="/ChristinaDRoberts?tab=followers" class="UnderlineNav-item ">
+          Followers
+          <span class="Counter">
+            7
+          </span>
+        </a>
                <a href="#">Following</a>
              </div>
 
@@ -166,8 +173,8 @@
                 </nav>
 
             <hr/>
-            {% block content %} {% endblock %}
-            {% block followers %} {% endblock %}
+            {% block context%} {% endblock %}
+            {% block info_followers %} {% endblock %}
 
             <hr/>
         </div>

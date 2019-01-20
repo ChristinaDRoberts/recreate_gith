@@ -33,7 +33,7 @@ def index():
         'repos': data2, 'general': data #also assign it another key of general and value of repos info
     }
 
-    print(type(context["repos"]))
+    # print(type(context["repos"]))
     # sends the info back to program using render template function
     # in index file which we will be using for repos page, and replace the {% %} values with
     # key : value data that we call out of the api data se
@@ -58,7 +58,7 @@ def following_people():
     data_followers = response.json()
 
     info_followers = {
-        "followers" : data_followers}
+        "followers": data_followers}
 
 
 
