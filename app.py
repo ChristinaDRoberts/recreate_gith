@@ -56,13 +56,23 @@ def index():
 def following_people():
     response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
     data_followers = response.json()
+    total = []
+
+    for follower in data_followers:
+        response = requests.get(follower["url" ])
+        specific_data=response.json()
+
+        total.append(specific_data)
+
+
+    print(total)
 
     info_followers = {
         "followers": data_followers}
 
 
 
-
+    # print(type(data_followers))
     #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
     #template file. render_template is a jinja2 method
     return render_template('followers.html', **info_followers)
