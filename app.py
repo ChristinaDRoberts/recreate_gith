@@ -55,28 +55,45 @@ def index():
 
 def following_people():
     response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
+    #data_followers is a list of dictionaries
     data_followers = response.json()
-    total=[data_followers]
 
-    print(data_followers)
-    # for follower in data_followers:
-    #     response2 = requests.get(data_followers["url"])
-    #     specific_data = response2.json()
+    info_followers = {
+
+        "followers": data_followers }
+
+
+    for user in data_followers:
+        # response2 = requests.get(['url'])
+        # specific_data = response2.json()
+
+        print(user)
+
+        # for i in user:
+        #     response2 = requests.get(['url'])
+        #     specific_data = response2.json()
+        #     print(specific_data)
+
+
+
+
+
+    # print(type(followers))
+    # print(type(data_followers))
+
+
+
     #
-    #
-    #
-    #
-    # #
     # #     total.append({specific_data})
     # #
     # #
-    info_followers = {
-        "followers": data_followers}
+    # info_followers = {
+    #     "followers": data_followers}
     # #
-    # # key = "followers"
+    # key = "followers"
     # a.setdefault(followers, [])
     # a[key].append(total)
-    #
+
     #
 
     #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
