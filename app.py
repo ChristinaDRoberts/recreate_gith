@@ -67,9 +67,13 @@ def following_people():
         # response2 = requests.get(['url'])
         # specific_data = response2.json()
 
+        #user is a dictionary
         print(user)
 
-        # for i in user:
+        for i in data_followers[5]:
+            print(i)
+
+
         #     response2 = requests.get(['url'])
         #     specific_data = response2.json()
         #     print(specific_data)
