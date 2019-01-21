@@ -10,6 +10,18 @@ from flask import render_template
 
 import requests
 
+
+try:
+    from key import github_api_token
+    headers = {
+        'Authorization': 'token {}'.format(github_api_token)
+    }
+except:
+    print('No key file found. Using the public API access.')
+    headers = {}
+
+
+
 #load all the packages
 app = Flask(__name__)   #load all the packages ??? where does it look for packages
 
@@ -21,7 +33,7 @@ def index():
     response = requests.get("https://api.github.com/users/ChristinaDRoberts")
     # gets info and stores it in response 2
     response2 = requests.get("https://api.github.com/users/ChristinaDRoberts/repos")
-    # uses buit in function to read json and convert it to python, stores that in data variable
+    # uses built in function to read json and convert it to python, stores that in data variable
     data = response.json()
     data2 = response2.json()
 
@@ -57,21 +69,37 @@ def following_people():
     response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
     #data_followers is a list of dictionaries
     data_followers = response.json()
+    #specific_user_data is a list of strings
+    specific_user_data = []
 
-    info_followers = {
-
-        "followers": data_followers }
 
 
     for user in data_followers:
-        # response2 = requests.get(['url'])
-        # specific_data = response2.json()
+        user_url = user.get('url')
 
-        #user is a dictionary
-        print(user)
+        response2 = requests.get(user_url)
+        u_data = response2.json()
 
-        for i in data_followers[5]:
-            print(i)
+
+        #user is a dictionary of each follower
+
+
+        print(user_url)
+        print(u_data)
+
+
+
+        specific_user_data.append(u_data)
+
+    info_followers = {
+
+        "followers": specific_user_data}
+
+
+
+
+        # for i in data_followers[[]]:
+        #     print(i)
 
 
         #     response2 = requests.get(['url'])
@@ -91,9 +119,7 @@ def following_people():
     # #     total.append({specific_data})
     # #
     # #
-    # info_followers = {
-    #     "followers": data_followers}
-    # #
+
     # key = "followers"
     # a.setdefault(followers, [])
     # a[key].append(total)
