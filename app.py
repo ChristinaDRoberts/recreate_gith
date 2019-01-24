@@ -30,9 +30,9 @@ app = Flask(__name__)   #load all the packages ??? where does it look for packag
 # defining function that will get my info for page from github
 def index():
     # gets info from api and stores it in variable response
-    response = requests.get("https://api.github.com/users/ChristinaDRoberts")
+    response = requests.get("https://api.github.com/users/ChristinaDRoberts", headers=headers)
     # gets info and stores it in response 2
-    response2 = requests.get("https://api.github.com/users/ChristinaDRoberts/repos")
+    response2 = requests.get("https://api.github.com/users/ChristinaDRoberts/repos", headers=headers)
     # uses built in function to read json and convert it to python, stores that in data variable
     data = response.json()
     data2 = response2.json()
@@ -66,7 +66,7 @@ def index():
 @app.route('/followers/', methods=["GET"])
 
 def following_people():
-    response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
+    response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers", headers=headers)
     #data_followers is a list of dictionaries
     data_followers = response.json()
     #specific_user_data is a list of strings
@@ -75,17 +75,19 @@ def following_people():
 
 
     for user in data_followers:
+        #user_url is a list
         user_url = user.get('url')
 
-        response2 = requests.get(user_url)
+        response2 = requests.get(user_url, headers=headers)
         u_data = response2.json()
 
 
         #user is a dictionary of each follower
+        #user_url is just each users url
 
 
-        print(user_url)
-        print(u_data)
+        # print(user_url)
+        # print(u_data)
 
 
 
@@ -98,33 +100,6 @@ def following_people():
 
 
 
-        # for i in data_followers[[]]:
-        #     print(i)
-
-
-        #     response2 = requests.get(['url'])
-        #     specific_data = response2.json()
-        #     print(specific_data)
-
-
-
-
-
-    # print(type(followers))
-    # print(type(data_followers))
-
-
-
-    #
-    # #     total.append({specific_data})
-    # #
-    # #
-
-    # key = "followers"
-    # a.setdefault(followers, [])
-    # a[key].append(total)
-
-    #
 
     #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
     #template file. render_template is a jinja2 method
@@ -133,5 +108,5 @@ def following_people():
 #
 # use this is pipenv shell and no restarting of server required
 # export FLASK_APP=my_application
-# $ export FLASK_ENV=development
+# $ export FLASK_ENV=development ; flask run
 # $

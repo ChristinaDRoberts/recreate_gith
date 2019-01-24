@@ -139,3 +139,13 @@ body{
    width:35%;
    display: inline-block;
 }
+
+.d-table-cell .col-9 .v-align-top{
+    display: inline-block;
+    height: 50%;
+
+}
+
+p{
+    display: inline-block;
+}
